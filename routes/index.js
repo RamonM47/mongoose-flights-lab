@@ -1,10 +1,8 @@
 import { Router } from 'express'
+import * as indexCtrl from '../controllers/index.js'
 const router = Router()
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Mongoose Movies' })
-})
+router.get('/', indexCtrl.index)
 
 export { 
   router

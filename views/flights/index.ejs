@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🛫 Mongoose Flights</title>
+</head>
+
+<body>
+  <h1>Mongoose Flights</h1>
+  <% flight.forEach(function(flight) { %>
+    Airline: <%= flight.airline %>
+      Airport: <%= flight.airport %> <br>
+        Flight Number: <%= flight.flightNo %> <br>
+          Departure Date: <%= flight.departs %> <br>
+            <a href="/flights/<%= flight._id %> ">Details</a> <br>
+            <% }) %>
+              <a href="/flights/new">Add a flight</a>
+              <a href="/destinations/new">Add a Destination</a>
+</body>
+
+</html>

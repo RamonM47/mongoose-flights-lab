@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mongoose Flights</title>
+</head>
+
+<body>
+  <h1>Add a Destination</h1>
+  <form id="add-destination-form" action="/destinations" method="POST">
+    <label for="destinations">Add a destination</label>
+    <input type="text" name="airport" id="destination" required: true>
+    <button type="submit">Add Destination</button>
+  </form>
+  <p>Destinations ⬇️ <br></p>
+  <% destinations.forEach(function(destination) { %>
+    <p> - <%= destination.airport %>
+    </p><br>
+    <% }) %>
+    <a href="/flights"> Back to Flights</a>
+</body>
+
+</html>
